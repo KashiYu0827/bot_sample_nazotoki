@@ -1,1 +1,1 @@
-worker: python nazotokimyst.py
+worker: python nazotokimyst_sample.py

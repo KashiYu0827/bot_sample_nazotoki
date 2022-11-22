@@ -7,7 +7,7 @@ import re
 intents = discord.Intents.all()
 intents.members = True
 client = discord.Client(intents=intents)
-token = 'MTAzMTg2NjU0NzEzMzc2MzY4NQ.GAhDNJ.QreBFPbiB5SIjqJMK6UaHHOE4QW5uC4Y0046Ec' #地理ミステリーハンター試験2022 かっしーのサブアカウント
+token = '' #ここにBOTのトークンを入れる
 
 dict_password = {
 "こうていさ":"さすが！キーワードは「こうていさ（高低差）」だ！\n今週の授業では、高低差のマップを使って、標高（ひょうこう）が高い新宿（しんじゅく）と、坂が多い渋谷（しぶや）のミステリーを解き明かしたね！\n\nキミたちには、この場所の高低差マップを手がかりとして、あげよう！\n\nこの場所の高低差マップを見ると、\nあまりデコボコしていない、平野部（へいやぶ）と言われている地形（ちけい）なのがわかるね！\n\nこれでわかった人は、\n都道府県の名前をひらがなで入力してね！\nこれだと、まだわからないって人は、\n次の手がかりをゲットするために、２つ目のキーワードを入力してほしい。\n\n２つ目のキーワードは、今週の授業で出てきた大昔の時代の名前だよ！\nみんな、覚えているかな？\n\n「〇○〇〇」期。\n〇に当てはまる言葉をひらがなで入れてみよう！\nもし、わからなかったら「てがかり０」と送ってね！\nhttps://imgur.com/a/jKnt1rT",
@@ -297,7 +297,7 @@ async def on_message(message):
     # メッセージ送信者がBotだった場合は無視する
     if message.author.bot:
         return
-        
+
     # DM以外に反応しないようにする
     if re.match('Direct Message', str(message.channel)):
         try:
@@ -307,7 +307,7 @@ async def on_message(message):
             await message.author.send(default_text)
         finally:
             pass
-            
+
 
 client.run(token)
 #あいうえお
